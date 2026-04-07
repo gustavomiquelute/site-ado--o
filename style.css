@@ -1,3 +1,37 @@
-Formulario {
-    display: flex:inline-flex;
+#Formulario {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+    background-color: white;
+    border: 2px solid #8D6E63;
+   
+
+}
+
+body {
+    background-color: #FFF8E1;
+    color: #3E2723;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #8D6E63;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+button {
+    background-color: #FFB74D;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FFA726;
 }
