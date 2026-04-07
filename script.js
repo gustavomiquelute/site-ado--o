@@ -1,32 +1,32 @@
-const selectMoradia = document.getElementById('moradia');
-const divApartamento = document.getElementById('apartamentodiv');
-const divCasa = document.getElementById('casadiv');
 
-const selectQuintal = document.getElementById('quintal');
-const divQuintalSeguro = document.getElementById('quintaldiv');
+var campoMoradia = document.getElementById('moradia');
+var campoQuintal = document.getElementById('quintal');
 
-
-selectMoradia.addEventListener('change', function() {
-
-    if (this.value === 'apartamento') {
-        divApartamento.style.display = 'block';
-        divCasa.style.display = 'none';
-        divQuintalSeguro.style.display = 'none';
-    } else if (this.value === 'casa') {
-        divCasa.style.display = 'block';
-        divApartamento.style.display = 'none';
-    } else {
-        divApartamento.style.display = 'none';
-        divCasa.style.display = 'none';
-        divQuintalSeguro.style.display = 'none';
+campoMoradia.onchange = function() {
+    
+    if (campoMoradia.value == 'apartamento') {
+        document.getElementById('apartamentodiv').style.display = 'block';
+        document.getElementById('casadiv').style.display = 'none';
+        document.getElementById('quintaldiv').style.display = 'none';
+    } 
+    
+    else if (campoMoradia.value == 'casa') {
+        document.getElementById('casadiv').style.display = 'block';
+        document.getElementById('apartamentodiv').style.display = 'none';
+    } 
+    
+    else {
+        document.getElementById('apartamentodiv').style.display = 'none';
+        document.getElementById('casadiv').style.display = 'none';
+        document.getElementById('quintaldiv').style.display = 'none';
     }
-});
+};
 
-
-selectQuintal.addEventListener('change', function() {
-    if (this.value === 'sim') {
-        divQuintalSeguro.style.display = 'block';
+campoQuintal.onchange = function() {
+    
+    if (campoQuintal.value == 'sim') {
+        document.getElementById('quintaldiv').style.display = 'block';
     } else {
-        divQuintalSeguro.style.display = 'none';
+        document.getElementById('quintaldiv').style.display = 'none';
     }
-});
+};
